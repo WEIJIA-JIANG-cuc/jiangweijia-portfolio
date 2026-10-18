@@ -1,0 +1,2 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {createFish,stepFish} from './behavior.js';
+test('three independent fish remain in water with bounded turning',()=>{const fish=[createFish(-1.8,2.5,1),createFish(-.5,2.3,2),createFish(.5,2.8,3)];let paused=false;for(let i=0;i<36000;i++){for(const f of fish){const a=f.angle;stepFish(f,1/60,fish);assert.ok(Math.abs(f.angle-a)<=.8/60+1e-8);assert.ok(((f.x+.9)/3.1)**2+((f.z-2.45)/1.9)**2<1.15);paused ||= f.mode==='悬停'}}assert.ok(paused);assert.notEqual(fish[0].target.x,fish[1].target.x)});

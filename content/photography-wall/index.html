@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>摄影 · 蒋维嘉作品集</title>
+  <link rel="stylesheet" href="wall.css">
+</head>
+<body>
+  <main id="driftwall" class="drift-wall" aria-label="摄影作品墙，点击照片查看原图">
+    <div id="dwPlane" class="dw-plane"></div>
+  </main>
+  <dialog id="lightbox" class="lightbox" aria-label="摄影作品原图">
+    <button id="lightbox-close" type="button" aria-label="关闭原图">×</button>
+    <img id="lightbox-image" alt="">
+    <p id="lightbox-error" hidden>原图暂时无法加载，请关闭后重试。</p>
+  </dialog>
+  <script type="module" src="wall.js"></script>
+</body>
+</html>
